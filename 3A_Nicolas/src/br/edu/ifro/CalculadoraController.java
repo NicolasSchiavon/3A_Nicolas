@@ -7,7 +7,11 @@ package br.edu.ifro;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 
 /**
  * FXML Controller class
@@ -15,10 +19,48 @@ import javafx.fxml.Initializable;
  * @author 81608713253
  */
 public class CalculadoraController implements Initializable {
+    
+    @FXML
+    private TextField txtnumero1, txtnumero2, txtresultado;
+    
+    @FXML
+    private Button btnsomar, btnSubitraçao, btndivisao, btnmultiplicaçao;
+    
+    @FXML
+    private void somar(ActionEvent event) {
+    Double num1 = Double.parseDouble(txtnumero1.getText());
+    Double num2 = Double.parseDouble(txtnumero2.getText());
+    Double resultado = num1 + num2;
+    
+    txtresultado.setText(resultado.toString());
+        
+    }
+     private void subitrair(ActionEvent event) {
+    Double num1 = Double.parseDouble(txtnumero1.getText());
+    Double num2 = Double.parseDouble(txtnumero2.getText());
+    Double resultado = num1 - num2;
+    
+    txtresultado.setText(resultado.toString());
+        
+    }
+      private void divisao(ActionEvent event) {
+    Double num1 = Double.parseDouble(txtnumero1.getText());
+    Double num2 = Double.parseDouble(txtnumero2.getText());
+    Double resultado = num1 / num2;
+    
+    txtresultado.setText(resultado.toString());
+        
+    }
+       private void multiplicaçao(ActionEvent event) {
+    Double num1 = Double.parseDouble(txtnumero1.getText());
+    Double num2 = Double.parseDouble(txtnumero2.getText());
+    Double resultado = num1 * num2;
+    
+    txtresultado.setText(resultado.toString());
+        
+    }
 
-    /**
-     * Initializes the controller class.
-     */
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
