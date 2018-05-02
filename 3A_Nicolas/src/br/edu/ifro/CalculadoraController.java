@@ -24,10 +24,19 @@ public class CalculadoraController implements Initializable {
     private TextField txtnumero1, txtnumero2, txtresultado;
     
     @FXML
-    private Button btnsomar, btnSubitraçao, btndivisao, btnmultiplicaçao;
+    private Button btnsomar;
+    @FXML
+    private Button btnsubitraçao;
     
     @FXML
-    private void somar(ActionEvent event) {
+    private Button btndivisao;
+    
+    @FXML
+    private Button btnmultiplicaçao;
+     
+    
+    @FXML
+    private void soma(ActionEvent event) {
     Double num1 = Double.parseDouble(txtnumero1.getText());
     Double num2 = Double.parseDouble(txtnumero2.getText());
     Double resultado = num1 + num2;
@@ -35,7 +44,8 @@ public class CalculadoraController implements Initializable {
     txtresultado.setText(resultado.toString());
         
     }
-     private void subitrair(ActionEvent event) {
+    @FXML
+     private void subitraçao(ActionEvent event) {
     Double num1 = Double.parseDouble(txtnumero1.getText());
     Double num2 = Double.parseDouble(txtnumero2.getText());
     Double resultado = num1 - num2;
@@ -43,7 +53,8 @@ public class CalculadoraController implements Initializable {
     txtresultado.setText(resultado.toString());
         
     }
-      private void divisao(ActionEvent event) {
+     @FXML
+     private void divisao(ActionEvent event) {
     Double num1 = Double.parseDouble(txtnumero1.getText());
     Double num2 = Double.parseDouble(txtnumero2.getText());
     Double resultado = num1 / num2;
@@ -51,7 +62,8 @@ public class CalculadoraController implements Initializable {
     txtresultado.setText(resultado.toString());
         
     }
-       private void multiplicaçao(ActionEvent event) {
+     @FXML
+     private void multiplicaçao(ActionEvent event) {
     Double num1 = Double.parseDouble(txtnumero1.getText());
     Double num2 = Double.parseDouble(txtnumero2.getText());
     Double resultado = num1 * num2;
@@ -59,7 +71,6 @@ public class CalculadoraController implements Initializable {
     txtresultado.setText(resultado.toString());
         
     }
-
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {

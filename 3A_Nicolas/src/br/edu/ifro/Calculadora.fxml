@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import com.jfoenix.controls.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
@@ -9,15 +10,25 @@
 
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.CalculadoraController">
    <children>
-      <JFXButton fx:id="btnsomar" layoutX="435.0" layoutY="47.0" onAction="#soma" text="Soma" />
-      <JFXButton layoutX="426.0" layoutY="113.0" text="Subtração" />
-      <JFXButton layoutX="442.0" layoutY="175.0" text="Divisão" />
-      <JFXButton fx:id="btnmulyiplicaçao" layoutX="426.0" layoutY="234.0" text="Multiplicação" />
-      <TextField fx:id="txtnumero1" layoutX="61.0" layoutY="60.0" />
-      <TextField fx:id="txtnumero2" layoutX="61.0" layoutY="126.0" />
-      <TextField fx:id="txtresultado" layoutX="61.0" layoutY="222.0" />
-      <Label layoutX="61.0" layoutY="30.0" text="Numero 1:" />
-      <Label layoutX="61.0" layoutY="96.0" text="Numero 2:" />
-      <Label layoutX="61.0" layoutY="200.0" text="Resultado:" />
+      <JFXButton fx:id="btnsomar" layoutX="240.0" layoutY="184.0" onAction="#soma" prefHeight="44.0" prefWidth="98.0" text="Soma" />
+      <JFXButton fx:id="btnsubitraçao" layoutX="246.0" layoutY="300.0" onAction="#subitraçao" prefHeight="50.0" prefWidth="115.0" text="Subtração" />
+      <JFXButton fx:id="btndivisao" layoutX="437.0" layoutY="190.0" onAction="#divisao" prefHeight="58.0" prefWidth="136.0" text="Divisão" />
+      <JFXButton fx:id="btnmultiplicaçao" layoutX="330.0" layoutY="237.0" onAction="#multiplicaçao" prefHeight="44.0" prefWidth="115.0" text="Multiplicação" />
+      <TextField fx:id="txtnumero1" layoutX="43.0" layoutY="206.0" />
+      <TextField fx:id="txtnumero2" layoutX="43.0" layoutY="272.0" />
+      <TextField fx:id="txtresultado" layoutX="43.0" layoutY="330.0" />
+      <Label layoutX="43.0" layoutY="176.0" text="Numero 1:" />
+      <Label layoutX="43.0" layoutY="242.0" text="Numero 2:" />
+      <Label layoutX="43.0" layoutY="308.0" text="Resultado:" />
+      <Label layoutX="22.0" layoutY="2.0" text="Calculadora">
+         <font>
+            <Font size="96.0" />
+         </font>
+      </Label>
+      <Button layoutX="494.0" layoutY="355.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="92.0" style="-fx-background-color: red;" text="sair">
+         <font>
+            <Font name="Arial Black" size="10.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
